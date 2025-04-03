@@ -1,0 +1,17 @@
+name: project_8
+services:
+  db:
+    container_name: project_8
+    build:
+      context: .
+      dockerfile: db.dockerfile
+    ports:
+      - "3310:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USERNAME}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: livrai
+    restart: unless-stopped
+    env_file:
+      - path: .env
