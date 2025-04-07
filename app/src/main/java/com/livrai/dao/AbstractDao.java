@@ -30,7 +30,7 @@ public class AbstractDao {
         }
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/livrai", "root", "password");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3310/livrai", "user", "123456");
         } catch (SQLException e) {
             e.printStackTrace();
         }
