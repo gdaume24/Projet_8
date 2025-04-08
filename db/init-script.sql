@@ -20,3 +20,6 @@ CREATE TABLE delivery (
   PRIMARY KEY (id),
   FOREIGN KEY (userId) REFERENCES user(id)
 );
+
+INSERT INTO user (email, name, password, admin) VALUES
+  ('geoffroy.daumer@yopmail.com', 'Livrai', 'Ladom$1234', TRUE);
